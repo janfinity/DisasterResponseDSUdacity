@@ -79,7 +79,7 @@ def index():
             'data': [
                 Bar(
                     x=category_names,
-                    y=category_boolean
+                    y=category_counts
                 )
             ],
 
