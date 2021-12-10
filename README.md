@@ -28,7 +28,7 @@ git clone https://github.com/janfinity/DisasterResponseDSUdacity.git
 
 - To run the ETL-Pipeline run the following command
     
-    'python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster_response.db'
+    'python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv disaster_response.db'
 
 - To run the ML-Pipeline run the following command
 
