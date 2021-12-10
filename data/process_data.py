@@ -75,14 +75,14 @@ def save_data(df, database_filename):
     Function to save the data to a SQLite database
 
     Arguments:
-        df -> Combined and cleaned data
-        database_filename -> path to SQLite database
+        df : Combined and cleaned data
+        database_filename : path to SQLite database
     """
 
-    engine = create_engine('sqlite:///'+ database_filename)
+    engine = create_engine('sqlite:///data/'+ database_filename)
     #create variabl to convert filepath into tablename
-    table_name = database_filename.replace(".db","")
-    df.to_sql(database_filename, engine, index=False, if_exists='replace')
+    table_name = database_filename.replace('.db','')
+    df.to_sql(table_name, engine, index=False, if_exists='replace')
 
 def main():
     if len(sys.argv) == 4:
