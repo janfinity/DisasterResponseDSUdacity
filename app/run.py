@@ -49,9 +49,13 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
+    category_counts = (df.iloc[:,4:] != 0).sum().values
+    category_names = df.iloc[:,4:].columns
+
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
+    #Graph 1 | Barplot of message distribution per genre
         {
             'data': [
                 Bar(
@@ -67,6 +71,26 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+    #Graph 2 | Barplot of message distribution per category 
+        {
+            'data': [
+                Bar(
+                    x=category_names,
+                    y=category_boolean
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category",
+                    'tickangle' : 45
                 }
             }
         }
