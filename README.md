@@ -22,7 +22,7 @@ Therefore the project is structured into three parts:
 
 You can find all files in a git repository
 
-git clone https://github.com/
+git clone https://github.com/janfinity/DisasterResponseDSUdacity.git
 
 ## Execution
 
