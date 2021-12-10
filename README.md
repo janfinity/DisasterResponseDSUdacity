@@ -1,14 +1,40 @@
+
 # Disaster Response Pipeline Project
+## Introduction
+As part of the Udacity Data Scientist Nano Degree the objective of this project was to build both an ETL and a ML-Pipeline.
+The data is provided by Figure Eight and contains pre-labelled tweets and messages of real-life disaster events. In the course of the projects messages are processed using a natural language processing (NLP) model to categorize messages in real-time.
 
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+Therefore the project is structured into three parts:
+- Process the data building an ETL-Pipeline
+- Building a ML-Pipeline
+- Display the results and provide a UI in a web app
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+## Dependencies
+    - Python 3.5+
+    - ML-Libraries: NumPy, SciPy, Pandas, scikit-learn
+    - NLP-Libraries: NLTK
+    - SQLite Libraries: SQLAlchemy
+    - Model Dumb and Load: Pickle
+    - Web-App: Flask
+    - Visualization: Plotly
 
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
+## Installation
 
-3. Go to http://0.0.0.0:3001/
+You can find all files in a git repository
+
+git clone https://github.com/
+
+## Execution
+
+- To run the ETL-Pipeline run the following command
+    
+    'python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster_response.db'
+
+- To run the ML-Pipeline run the following command
+
+    'python models/train_classifier.py disaster_response.db classifier.pkl'
+
+- To start the web-app run
+
+    'python app/run.py'
+
